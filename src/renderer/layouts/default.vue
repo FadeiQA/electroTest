@@ -64,7 +64,6 @@ export default {
         return this.pictures
       },
       set (value) {
-        console.log(value)
         this.updatePic(value.filter((file) => ['image/png', 'image/jpeg', 'image/svg+xml'].includes(file.type)))
         this.$router.push('/')
       }
@@ -91,7 +90,6 @@ export default {
       return URL.createObjectURL(img)
     },
     goToPic (id) {
-      console.log('asdad go')
       this.$router.push(`/picViewer/${id}`)
     }
   }
